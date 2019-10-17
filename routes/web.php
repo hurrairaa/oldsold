@@ -28,7 +28,6 @@ Route::get('/show/{id}','AddController@show');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/','AddController@index');
 Route::get('mylogout',function(){
-    Auth::logout();
     url('/index');
 });
 
