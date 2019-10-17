@@ -4,7 +4,7 @@
 
 <!--/ Intro Skew Star /-->
 <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
-    <div class="overlay-itro"></div>
+    <div class="overlay-intro"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
@@ -38,7 +38,7 @@
       </div>
     <br><br>
 <!-- ######################### CARD ################################-->
-  
+
       <div class="row">
       @foreach($Adds as $add)
         <div class="col-md-4">
@@ -50,7 +50,7 @@
                   <!-- class="avatar rounded-circle" -->
                 </a>
               </div>
-      
+
             </div>
             <div class="card-body">
               <div class="card-category-box">
@@ -58,16 +58,16 @@
                   <h6 class="category"><strong>{{$add->title}}</strong></h6>
                 </div>
               </div>
-              <h3 class="card-description"><a href="{{url('show/'.$add->id)}}">{{str_limit($add->description,10,)}}</a></h3>
+              <h3 class="card-description"><a href="{{url('show/'.$add->id)}}">{{str_limit($add->description,10)}}</a></h3>
               <p class="card-title">
                 Rs {{$add->cost}}
               </p>
             </div>
           </div>
-          
+
         </div>
         @endforeach
-        
+
     </div>
   </div>
   </section>
@@ -75,7 +75,7 @@
   <br><br><br>
 
 
-  
+
  <!--#######################      End Of Card      #######################-->
 
 
@@ -112,7 +112,7 @@
       @if($errors->has("cost"))
           <p class="text-danger">{{$errors->get('cost')[0]}}</p>
       @endif
-      
+
 
       <div class="form-group">
         <label>Enter phone_no:</label>
@@ -150,7 +150,7 @@
       @endif
 
 
-    
+
       <div class="form-group">
         <label>Enter type:</label>
         <input  class="form-control" type="text" placeholder="type" name="type" value="{{old('type')}}">
@@ -172,7 +172,7 @@
 
 
       <button type="submit" class="btn btn-info">publish</button>
-    <form>
+    </form>
   </div>
 
 </div>
